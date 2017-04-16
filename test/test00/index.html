@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>LoginExample</title>
+</head>
+<body>
+	<form name="loginForm" method="post" action="login.php">
+		<p>
+			<label for="username" class="label">用户名：</label>
+			<input type="text" name="username" id="username" class="input"/>
+		</p>
+		<p>
+			<label for="password" class="label">密 码：</label>
+			<input type="password" name="password" id="password" class="input"/>
+		</p>
+		<p>
+			<label for="verifycodetext" class="label">验证码：</label>
+			<input type="text" name="verifycodetext" id="verifycodetext"/>
+			<img id="checkcode" src="crawl.php"/>
+		</p>
+		<p>
+			<input type="submit" name="submit" class="submit" value="登录">
+		</p>
+	</form>
+</body>
+</html>

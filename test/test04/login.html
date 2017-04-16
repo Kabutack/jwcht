@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+</head>
+<body>
+	<form name="loginForm" method="post" action="login.php">
+		<p>
+			<label for="xh" class="label">用户名：</label>
+			<input type="text" name="xh" id="xh" class="input"/>
+		</p>
+		<p>
+			<label for="pw" class="label">密 码：</label>
+			<input type="pw" name="pw" id="pw" class="input"/>
+		</p>
+		<p>
+			<label for="code" class="label">验证码：</label>
+			<input type="text" name="code" id="code"/>
+			<img id="checkcode" src="code.php"/>
+		</p>
+		<p>
+			<input type="submit" name="submit" class="submit" value="登录">
+		</p>
+	</form>
+</body>
+</html>
