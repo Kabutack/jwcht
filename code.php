@@ -6,14 +6,12 @@
 	
 	$config = include '/vendor/yuan1994/z-crawler/config.php';
 
-	// $username = $_POST["data.username"];
-	// $password = $_POST["data.password"];
-	$username = $_POST['username'];
-	$password = $_POST['password'];
+	//获取学生学号&密码
+	$username = $_GET['username'];
+	$password = $_GET['password'];
 
 	// 实例化
 	$zCrawler = new ZCrawler($username, $password, $config);
-	// $zCrawler = new Foundation\ZCrawler($username, $password, $config);
 
 	//获取实例
 	$login = $zCrawler->login;
@@ -23,11 +21,7 @@
 	$codeUrl = $login->getCaptcha($path);//返回验证码图片保存路径
 	// echo $codeUrl;
 
-	// $img = file_get_contents($codeUrl, true);
-	// header("Content-Type: image/jpeg; text/html; charset=utf-8");
-	// echo $img;
-	$fullcodeUrl = 'http://localhost/zafujwc/'.$codeUrl;
-	echo $fullcodeUrl;
-	echo $username;
-	echo $password;
+	$prefix = 'http://localhost/zafujwc/';//验证码图片路径前缀地址
+	$fullcodeUrl = $prefix.$codeUrl;
+	echo $fullcodeUrl;//返回验证码图片路径
  ?>
