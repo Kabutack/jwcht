@@ -21,6 +21,9 @@
 	$codeUrl = $login->getCaptcha($path);//返回验证码图片保存路径
 	// echo $codeUrl;
 
+	//设置cookie
+	// $login->setCookie(CookieJar $cookie);
+
 	$prefix = 'http://localhost/zafujwc/';//验证码图片路径前缀地址
 	$fullcodeUrl = $prefix.$codeUrl;
 	echo $fullcodeUrl;//返回验证码图片路径

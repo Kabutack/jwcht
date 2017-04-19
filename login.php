@@ -17,6 +17,9 @@
 	//获取实例
 	$login = $zCrawler->login;
 
+	//获取cookie
+	$login->getCookie($forceRefresh = false, $method = 'withCode');
+
 	//使用验证码登录
 	$cookie = $login->withCode($codenum);//返回GuzzleHttp\Cookie\CookieJar Cookie 对象
 
