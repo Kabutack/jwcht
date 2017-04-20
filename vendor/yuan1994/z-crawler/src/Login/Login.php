@@ -167,10 +167,10 @@ class Login extends AbstractAPIBase
         $response = $this->request('get', [$url, [], $options]);
 
         /*不清楚作者加这个判断的意图，导致不显示验证码*/
-        // // Check the StatusCode
-        // if ($response->getStatusCode() == 200) {
-        //     throw new HttpException('get the captcha failed!', 10005);
-        // }
+        // Check the StatusCode
+        if ($response->getStatusCode() !== 200) {
+            throw new HttpException('get the captcha failed!', 10005);
+        }
 
         return $codePath;
     }
